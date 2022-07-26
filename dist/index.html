@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>NBA Project</title>
+  </head>
+  <body>
+    <div id="search">
+      <input type="text" id="nameInput" placeholder="Fill Team Name Please:" />
+      <button type="submit" id="searchButton" onclick="Data()">
+        GET ROSTER
+      </button>
+    </div>
+
+    <div id="mainContainer"></div>
+
+    <script id="playerContainer" type="text/x-handlebars-template">
+      <div class="players">
+        <div class="namesPlayers">
+          <span class="firstName">{{this.firstName}}</span>
+          <span class="lastName">{{this.lastName}}</span>
+        </div>
+
+        <img
+          class="imgPlayer"
+          src="https://nba-players.herokuapp.com/players/{{this.lastName}}/{{this.firstName}}"
+          onerror="playerImg(this);"
+        />
+
+      </div>
+    </script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

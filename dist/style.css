@@ -1,0 +1,38 @@
+#nameInput {
+  flex-grow: 4;
+  border-radius: 10px;
+}
+.namesPlayers {
+  position: relative;
+}
+
+.imgPlayer {
+  background-color: #d9dee1;
+  width: 90%;
+  height: 350px;
+}
+
+#searchButton {
+  width: 200px;
+  border-radius: 10px;
+  background: #ef770e;
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-size: large;
+  grid-gap: 12px;
+}
+
+.players {
+  background-color: #ef770e;
+}
+
+#search {
+  display: flex;
+  align-items: stretch;
+  height: 5vh;
+  padding: 1vmax;
+}
